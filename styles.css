@@ -58,7 +58,7 @@ img {
 /* Header Styles */
 nav {
 	position: fixed;
-	z-index: 99;
+	z-index: 99999999;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -256,48 +256,55 @@ button {
 }
 
 /* Projects Section Styles */
-#projects{
+#projectsss{
 	background-color: #b2d5d8;
+	padding: 2rem;
 	display: flex;
-	
-}
-.project-container {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	
+	justify-content: center;
+}
+.h2-proj{
+	color: #000000;
+}
+.project-container {
+
+	height: 100%;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
 }
 
 
-.project-container .card {
+ .card {
 	position: relative;
-	width: 500px;
-	height: 230px;
 	background: linear-gradient(60deg, #151516 0%, #1d2229 10 0%);
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
 	margin-bottom: 15px;
+	margin-right: 20px;
 	border-radius: 20px;
+
 	}
 
-.project-container .card h2 {
-	z-index: 99;
+
+ .card h3 {
+	z-index: 60;
 	position: absolute; 
 	bottom: 25px;
 	right: 130px;
-	font-size: 50px; 
-	font-weight: 700;
-	color: #fff;
+	font-size: 30px; 
+	font-weight: 400;
+	color: #ffffff;
 	pointer-events: none; 
 	transition: 0.2s ease;
 	text-shadow: 04.125 rgba(0, 0, 0, 0.5);
 	}
 
-.project-container .card p {
-	z-index: 99; 
+ .card p {
+	z-index: 60; 
 	position: absolute;
 	bottom: 30px; 
 	right: 130px;
@@ -310,8 +317,8 @@ button {
 	transition: 0.25 ease;
 	}
 
-.project-container .card span {
-	z-index: 99;
+ .card span {
+	z-index: 60;
 	position: absolute;
 	top: 60px;
 	right: 35px;
@@ -324,8 +331,8 @@ button {
 	}
 
 .project-container .card .pic {
-	z-index: 100; 
-	width: 395px;
+	z-index: 70; 
+	width: 480px;
 	height: 200px;
 	background-image: url(img/shoes.png);
 	background-size: cover;
@@ -334,7 +341,7 @@ button {
 	transition: 0.3s ease;
 	}
 
-.project-container .card .project-but {
+.card .project-but {
 	position: absolute;
 	right: 30px;
 	bottom: 40px;
@@ -353,8 +360,8 @@ button {
 	transform: scale(16.5);
 	opacity: 0.5;
 	}
-.project-container .card:hover h2 {
-	bottom: 80px;
+.project-container .card:hover h3 {
+	bottom: 100px;
 	right: 50px;
 	}
 
@@ -388,9 +395,30 @@ button {
 	background-image: url(img/beach.png);
 	transition: 0.3 ease;
 	}
-.project-container .card2 .project-but{
-		background-color: #25c3a1;
+.project-container .card5 .pic {
+	background-image: url(img/documentation.png);
+	transition: 0.3 ease;
 	}
+.project-container .card6 .pic {
+	background-image: url(img/tribute.png);
+	transition: 0.3 ease;
+	}
+.project-container .card2 .project-but{
+		background-color: #1fe4e8;
+	}
+.project-container .card3 .project-but{
+		background-color: #df1487;
+	}
+.project-container .card5 .project-but{
+		background-color: #ffffff;
+	}
+.project-container .card4 .project-but{
+		background-color: #e9b034;
+	}
+.project-container .card6 .project-but{
+		background-color: #676666;
+	}
+
 
 /* Contact Section Styles */
 #contact {
@@ -500,6 +528,10 @@ button[type="submit"] {
   height: auto;
   
 	}
+	.card h3{
+		font-size: 20px;
+		font-weight: 200;
+	}
 	
 }
 @media (max-width:371px){
@@ -508,6 +540,27 @@ button[type="submit"] {
 	}
 	
 }
+
+	@media (max-width:511px){
+		.card h3{
+			color: #00000000;
+			overflow: hidden;
+		}
+		.card p {
+			z-index: 99; 
+			position: absolute;
+			bottom: 30px; 
+			left: 10px;
+			width: 150px;
+			color: #ffffff;
+			opacity: 0;
+			font-size: 12px; 
+			}
+	}
+	
+
+
+
 .dot:active{
 	background-color: #023047;
 }
